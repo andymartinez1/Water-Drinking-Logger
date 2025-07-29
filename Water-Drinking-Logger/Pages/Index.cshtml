@@ -1,10 +1,11 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home Page";
 }
 
 <a button type="button" class="btn btn-success" asp-area="" asp-page="/Create">Add Record</a>
+<button type="button" class="btn btn-success" onclick="calculate()">Calculate Total</button>
 
 <table id="records" class="table">
     <thead>
@@ -35,3 +36,5 @@
     }
     </tbody>
 </table>
+<div>Total Quantity: @ViewData["Total"]</div>
+<div id="result"></div>

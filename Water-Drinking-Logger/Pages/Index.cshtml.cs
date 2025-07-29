@@ -19,6 +19,7 @@ public class IndexModel : PageModel
     public void OnGet()
     {
         Records = GetAllRecords();
+        ViewData["Total"] = Records.AsEnumerable().Sum(x => x.Quantity);
     }
 
     private List<DrinkingWater> GetAllRecords()
